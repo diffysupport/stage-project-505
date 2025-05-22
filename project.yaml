@@ -38,7 +38,7 @@ advanced:
         type: custom
         click_element: false
         click_element_selector: .header-login
-        login_url: 'https://accounts.pixieset.com/login/'
+        login_url: /login
         username: ''
         password: ''
         username_selector: '#UserLogin_username'

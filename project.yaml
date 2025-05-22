@@ -36,7 +36,7 @@ advanced:
         - { value: '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"', header: Sec-CH-UA }
     cookies: ''
     custom_js: ''
-    custom_css: "img {\n\theight: auto !important;\n}\n\nhtml, body, .page-container {\n  \theight: auto !important; \n    min-height: 100vh !important; \n}"
+    custom_css: "img {\n\theight: auto !important;\n}\n\nhtml, body, .page-container {\n  \theight: auto !important; \n    min-height: 100vh !important; \n    overflow: auto !important;\n}"
     mock_content:
         - { type: title, selector: '' }
     login:

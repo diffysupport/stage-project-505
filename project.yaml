@@ -38,7 +38,7 @@ advanced:
         type: custom
         click_element: false
         click_element_selector: .header-login
-        login_url: /login
+        login_url: '/login/?spId=website'
         username: ''
         password: ''
         username_selector: '#UserLogin_username'

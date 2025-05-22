@@ -28,17 +28,21 @@ advanced:
     delay: 15
     scroll: true
     headers:
-        - { value: '', header: '' }
+        - { value: 'en-US,en;q=0.9', header: Accept-Language }
+        - { header: User-Agent, value: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36' }
     cookies: ''
     custom_js: ''
     custom_css: ''
     mock_content:
         - { type: title, selector: '' }
+    sensitivity: 15
+    night_mode: false
+    retina_images: false
     login:
         type: custom
-        click_element: false
+        click_element: true
         click_element_selector: .header-login
-        login_url: 'https://accounts.pixieset.com/login'
+        login_url: 'https://accounts.pixieset.com/login/?spId=website'
         username: ''
         password: ''
         username_selector: '#UserLogin_username'
@@ -51,3 +55,5 @@ advanced:
         workers_production_delay: 0
         workers_nonproduction_delay: 0
     stabilize: true
+proxy: false
+type: single_site

@@ -38,8 +38,8 @@ advanced:
         - { value: keep-alive, header: Connection }
         - { value: '1', header: DNT }
         - { value: max-age=0, header: Cache-Control }
-        - { header: Accept-Encoding, value: 'gzip, deflate, br' }
-        - { header: Sec-CH-UA, value: '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"' }
+        - { value: 'gzip, deflate, br', header: Accept-Encoding }
+        - { value: '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"', header: Sec-CH-UA }
     cookies: ''
     custom_js: "const allElements = document.querySelectorAll('*');\n  let maxHeight = 0;\n  allElements.forEach((element) => {\n    const elementBottom = element.getBoundingClientRect().bottom + window.scrollY;\n    if (elementBottom > maxHeight) {\n      maxHeight = elementBottom;\n    }\n  });\n  document.documentElement.style.height = `${maxHeight}px`;\n  document.body.style.height = `${maxHeight}px`;"
     custom_css: ''
@@ -47,8 +47,8 @@ advanced:
         - { type: title, selector: '' }
     login:
         type: custom
-        click_element: true
-        click_element_selector: .ps-cookie-popup__button.ps-cookie-popup__button--allow
+        click_element: false
+        click_element_selector: ''
         login_url: 'https://accounts.pixieset.com/login/?spId=website'
         username: ''
         password: ''

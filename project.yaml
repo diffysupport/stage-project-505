@@ -35,6 +35,8 @@ advanced:
         - { value: same-origin, header: Sec-Fetch-Site }
         - { value: '?1', header: Sec-Fetch-User }
         - { value: '1', header: Upgrade-Insecure-Requests }
+        - { header: Connection, value: keep-alive }
+        - { header: DNT, value: '1' }
     cookies: ''
     custom_js: ''
     custom_css: ''

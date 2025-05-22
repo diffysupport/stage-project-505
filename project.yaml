@@ -47,8 +47,8 @@ advanced:
         - { type: title, selector: '' }
     login:
         type: custom
-        click_element: false
-        click_element_selector: ''
+        click_element: true
+        click_element_selector: .ps-cookie-popup__button.ps-cookie-popup__button--allow
         login_url: '/login/?spId=website'
         username: ''
         password: ''

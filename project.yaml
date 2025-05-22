@@ -28,11 +28,23 @@ advanced:
     delay: 15
     scroll: true
     headers:
-        - { header: '', value: '' }
+        - { value: '', header: '' }
     cookies: ''
     custom_js: ''
     custom_css: ''
-    mock_content: ''
+    mock_content:
+        - { selector: '', type: title }
+    login:
+        type: custom
+        click_element: true
+        click_element_selector: .header-login
+        login_url: 'https://accounts.pixieset.com/login/'
+        username: ''
+        password: ''
+        username_selector: '#UserLogin_username'
+        password_selector: '#UserLogin_password'
+        submit_selector: '#login-button'
+        after_login_selector: ''
     performance:
         workers_production: 30
         workers_nonproduction: 10

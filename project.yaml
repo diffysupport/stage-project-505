@@ -36,7 +36,7 @@ advanced:
         - { value: '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"', header: Sec-CH-UA }
     cookies: ''
     custom_js: "const allElements = document.querySelectorAll('*');\n  let maxHeight = 0;\n  allElements.forEach((element) => {\n    const elementBottom = element.getBoundingClientRect().bottom + window.scrollY;\n    if (elementBottom > maxHeight) {\n      maxHeight = elementBottom;\n    }\n  });\n  document.documentElement.style.height = `${maxHeight}px`;\n  document.body.style.height = `${maxHeight}px`;"
-    custom_css: "img {\n\theight: auto !important;\n}\n\nhtml, body, .page-container {\n  \theight: auto !important; \n    min-height: 100vh !important; \n    overflow: auto !important;\n}"
+    custom_css: "img {\n\theight: auto !important;\n}\n\nhtml, body, .page-container {\n\n    overflow: auto !important;\n}"
     mock_content:
         - { type: title, selector: '' }
     login:

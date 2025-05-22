@@ -39,6 +39,7 @@ advanced:
         - { value: '1', header: DNT }
         - { value: max-age=0, header: Cache-Control }
         - { header: Accept-Encoding, value: 'gzip, deflate, br' }
+        - { header: Sec-CH-UA, value: '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"' }
     cookies: ''
     custom_js: "const allElements = document.querySelectorAll('*');\n  let maxHeight = 0;\n  allElements.forEach((element) => {\n    const elementBottom = element.getBoundingClientRect().bottom + window.scrollY;\n    if (elementBottom > maxHeight) {\n      maxHeight = elementBottom;\n    }\n  });\n  document.documentElement.style.height = `${maxHeight}px`;\n  document.body.style.height = `${maxHeight}px`;"
     custom_css: ''

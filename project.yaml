@@ -40,7 +40,7 @@ advanced:
     retina_images: false
     login:
         type: custom
-        click_element: true
+        click_element: false
         click_element_selector: .header-login
         login_url: 'https://accounts.pixieset.com/login/?spId=website'
         username: ''

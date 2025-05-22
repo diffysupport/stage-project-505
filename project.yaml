@@ -35,7 +35,7 @@ advanced:
         - { value: 'gzip, deflate, br', header: Accept-Encoding }
         - { value: '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"', header: Sec-CH-UA }
     cookies: ''
-    custom_js: "const allElements = document.querySelectorAll('*');\n  let maxHeight = 0;\n  allElements.forEach((element) => {\n    const elementBottom = element.getBoundingClientRect().bottom + window.scrollY;\n    if (elementBottom > maxHeight) {\n      maxHeight = elementBottom;\n    }\n  });\n  document.documentElement.style.height = `${maxHeight}px`;\n  document.body.style.height = `${maxHeight}px`;"
+    custom_js: "  const elements = Array.from(document.querySelectorAll('body *'))\n    .filter(el => !(el instanceof HTMLScriptElement || el instanceof HTMLStyleElement || el instanceof HTMLMetaElement));\n\n  const maxHeight = elements.reduce((max, el) => {\n    const bottom = el.getBoundingClientRect().bottom + window.scrollY;\n    return Math.max(max, bottom);\n  }, 0);\n\n  document.documentElement.style.height = `${maxHeight}px`;\n  document.body.style.height = `${maxHeight}px`;"
     custom_css: "img {\n\theight: auto !important;\n}\n\nhtml, body, .page-container {\n  \theight: 20000px !important;\n    overflow: auto !important;\n}\n\n#body-section-3362487 {\n\tdisplay: block !important;\n\topacity: 1 !important;\n    position: unset !important;\n}"
     mock_content:
         - { type: title, selector: '' }

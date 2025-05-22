@@ -33,10 +33,10 @@ advanced:
     custom_js: ''
     custom_css: ''
     mock_content:
-        - { selector: '', type: title }
+        - { type: title, selector: '' }
     login:
         type: custom
-        click_element: true
+        click_element: false
         click_element_selector: .header-login
         login_url: 'https://accounts.pixieset.com/login/'
         username: ''
